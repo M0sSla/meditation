@@ -1,0 +1,15 @@
+#container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+}
+
+.notification {
+  padding: 5px;
+  border: 2px solid black;
+  margin: 10px;
+  display: none;
+  justify-content: space-between;
+  align-items: start;
+}

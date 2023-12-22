@@ -1,0 +1,35 @@
+:root {
+    --main-color: #a89a9a;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+#sector2 {
+    background-color: var(--main-color);
+}
+.main__inner {
+    position: relative;
+    height: 100%;
+    max-width: 1220px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+
+#likeButton {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+}
+
+#drawButton {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+}

@@ -1,0 +1,485 @@
+:root {
+    --main-color: #a89a9a;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+#sector2 {
+    background-color: var(--main-color);
+}
+.main__inner {
+    height: 100%;
+    max-width: 1220px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+
+section {
+    background-color: var(--main-color);
+    width: 100%;
+
+}
+
+.section__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.task2_cont {
+    flex-grow: 1;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+}
+.task2_cont:hover .t2 {
+    transform: scale(0.99);
+}
+.t2 {
+    background-color: #444f98;
+    padding: 20px;
+    text-align: center;
+    transition: .4s ease-in-out;
+}
+
+.task2_cont .t2:hover {
+    transform: scale(1.02);
+    background-color: #984464;
+}
+
+.t2_1 {
+    grid-area: t2_1;
+}
+.t2_2 {
+    grid-area: t2_2;
+}
+.t2_3 {
+    grid-area: t2_3;
+}
+.t2_4 {
+    grid-area: t2_4;
+}
+.t2_5 {
+    grid-area: t2_5;
+}
+.t2_6 {
+    grid-area: t2_6;
+}
+.t2_7 {
+    grid-area: t2_7;
+}
+
+@media (min-width: 1201px){
+    .task2_cont {
+        grid-template-areas:
+                "t2_1 t2_1 t2_2 t2_3"
+                "t2_4 t2_5 t2_2 t2_6"
+                "t2_4 t2_7 t2_7 t2_7";
+        grid-template-rows: auto auto auto;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 851px) {
+    .task2_cont {
+        grid-template-areas:
+                "t2_1 t2_1 t2_3 t2_3"
+                "t2_4 t2_5 t2_2 t2_2"
+                "t2_6 t2_7 t2_7 t2_7";
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .task2_cont {
+        grid-template-areas:
+                "t2_1 t2_1 t2_3 t2_3"
+                "t2_4 t2_4 t2_2 t2_2"
+                "t2_5 t2_5 t2_6 t2_6"
+                "t2_5 t2_5 t2_7 t2_7";
+        grid-template-rows: auto auto auto auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .task2_cont {
+        grid-template-areas:
+                "t2_1"
+                "t2_2"
+                "t2_3"
+                "t2_4"
+                "t2_5"
+                "t2_6"
+                "t2_7";
+        grid-template-rows: auto;
+    }
+}
+
+.section2 .section__inner2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.task1_cont {
+    flex-grow: 1;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+}
+
+.t1 {
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #fd5038;
+    border-radius: 5px;
+}
+
+.header1 {
+    grid-area: header;
+}
+.nav1 {
+    grid-area: nav;
+}
+.main1 {
+    grid-area: main;
+}
+.sidebar1 {
+    grid-area: sidebar;
+}
+.ads1 {
+    grid-area: ads;
+}
+.footer1 {
+    grid-area: footer;
+}
+
+@media (min-width: 1201px){
+    .task1_cont {
+        grid-template-areas:
+                "header header header header"
+                "sidebar nav nav ads"
+                "sidebar main main ads"
+                "footer footer footer footer";
+        grid-template-rows: auto auto 1fr auto auto auto;
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 721px) {
+    .task1_cont {
+        grid-template-areas:
+                "header header header header"
+                "nav nav nav nav"
+                "sidebar main main main"
+                "ads ads ads ads"
+                "footer footer footer footer";
+        grid-template-rows: auto auto 1fr auto auto auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .task1_cont {
+        grid-template-areas:
+                "header header header header"
+                "nav nav nav nav"
+                "main main main main"
+                "sidebar sidebar sidebar sidebar"
+                "ads ads ads ads"
+                "footer footer footer footer";
+        grid-template-rows: auto auto 1fr auto auto auto;
+    }
+}
+
+
+
+
+.task3_cont {
+    flex-grow: 1;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+                "t3_1 t3_2 t3_3 t3_3"
+                "t3_1 t3_4 t3_5 t3_6"
+                "t3_7 t3_7 t3_5 t3_8";
+    grid-template-rows: auto auto auto;
+}
+
+.t3 {
+    position: relative;
+    background: url(https://ru.legacy.reactjs.org/logo-og.png) center no-repeat;
+    /*background-size: 250%;*/
+    padding: 20px;
+    min-height: 150px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.t3:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    content: "";
+    height: 0;
+    filter: opacity(0);
+    width: 100%;
+    background: linear-gradient(rgba(255, 0, 0, 0) 70%, white);
+    transition: .6s ease-in-out;
+}
+
+.t3:before {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 20px;
+    content: "Веб-разработка";
+    font-weight: 700;
+    filter: opacity(0);
+    transform: translateY(-20px);
+    transition: .6s ease-in-out;
+}
+
+.t3:hover:after {
+    height: 100%;
+    filter: opacity(1);
+}
+.t3:hover:before {
+    filter: opacity(1);
+    transform: translateY(0px);
+}
+
+.t3:hover {
+
+}
+
+.task3_cont .t3:hover {
+    transform: scale(1.03);
+    background-color: #984464;
+}
+
+.t3_1 {
+    grid-area: t3_1;
+}
+.t3_2 {
+    grid-area: t3_2;
+}
+.t3_3 {
+    grid-area: t3_3;
+}
+.t3_4 {
+    grid-area: t3_4;
+}
+.t3_5 {
+    grid-area: t3_5;
+}
+.t3_6 {
+    grid-area: t3_6;
+}
+.t3_7 {
+    grid-area: t3_7;
+}
+.t3_8 {
+    grid-area: t3_8;
+}
+
+
+
+@media (max-width: 850px) {
+    .task3_cont {
+        grid-template-areas:
+                "t3_1 t3_1 t3_3 t3_3"
+                "t3_2 t3_4 t3_4 t3_5"
+                "t3_2 t3_6 t3_6 t3_5"
+                "t3_7 t3_7 t3_8 t3_8";
+        grid-template-rows: auto auto auto auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .task3_cont {
+        grid-template-areas:
+                "t3_1"
+                "t3_2"
+                "t3_3"
+                "t3_4"
+                "t3_5"
+                "t3_6"
+                "t3_7"
+                "t3_8";
+        grid-template-rows: auto;
+    }
+}
+
+
+
+
+/*task4*/
+
+
+.section__inner3 {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    max-width: 1220px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.task4_cont {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.task4_cont h2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.form__wrapper .box {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+
+}
+
+.form__wrapper .box {
+    color: white;
+}
+
+.form__wrapper .box input {
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(40, 205, 245);
+    transition: .5s ease-in-out;
+}
+
+.form__wrapper .box input:focus,
+.form__wrapper .box input:valid {
+    padding: 10px 10px;
+    background: rgb(40, 205, 245);
+    margin-top: 10px;
+}
+
+.form__wrapper .box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px;
+    transition: .5s ease-in-out;
+}
+
+.form__wrapper .box input:focus ~ label,
+.form__wrapper .box input:valid ~ label{
+    padding: 0;
+}
+
+
+.form__wrapper .box textarea {
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(40, 205, 245);
+    transition: .5s ease-in-out;
+}
+
+.textarea {
+    transition: .5s ease-in-out;
+}
+
+.form__wrapper .box .textarea:focus-within,
+.form__wrapper .box .textarea:valid {
+    padding: 10px 10px;
+    background: rgb(40, 205, 245);
+    margin-top: 10px;
+}
+
+
+.form__wrapper .box .textarea:focus-within ~ label,
+.form__wrapper .box .textarea:valid ~ label{
+    padding: 0;
+}
+
+
+.task4_cont input[type="submit"] {
+    background: rgb(40, 205, 245);
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.task4_cont input[type="submit"]:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+.footer-logo {
+    display: grid;
+    gap: 30px;
+    grid-gap: 30px;
+    align-items: center;
+}
+
+
+@media (min-width: 861px){
+    .footer-logo {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (max-width: 860px) {
+    .footer-logo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-logo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

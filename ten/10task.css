@@ -1,0 +1,21 @@
+:root {
+    --main-color: #a89a9a;
+}
+
+.wrapper {
+    min-height: 100vh ;
+    height: 100% ;
+}
+
+
+#sector2 {
+    background-color: var(--main-color);
+}
+.main__inner {
+    height: 100%;
+    max-width: 1220px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 0 auto;
+}

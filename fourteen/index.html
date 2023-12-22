@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="first">
+        <h2>first</h2>
+        <div id="content">
+          <a href="index.html"><p>address</p></a>
+          <a href="index.html">togrees</a>
+          <a href="index.html">bobobob</a>
+        </div>
+      </div>
+
+      <div class="second">
+        <h2>second</h2>
+        <img id="largeImg" src="img/img1.jpeg" />
+        <ul id="galery">
+          <li>
+            <img src="img/img1.jpeg" />
+          </li>
+          <li>
+            <img src="img/img2.jpeg" />
+          </li>
+          <li>
+            <img src="img/img3.jpeg" />
+          </li>
+          <li>
+            <img src="img/img4.jpeg" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="third">
+        <h2>third</h2>
+        <ul id="list">
+          <li>первое</li>
+          <li>второе</li>
+          <li>третье</li>
+          <li>четвертое</li>
+          <li>пятое</li>
+        </ul>
+      </div>
+
+      <div class="fourth">
+        <h2>fourth</h2>
+        <div class="slider">
+          <div class="stick"></div>
+        </div>
+      </div>
+
+      <div class="five">
+        <h2>five</h2>
+        <div id="product1" class="product" draggable="true">
+          <p>Товарчик</p>
+          <p class="cost">500</p>
+        </div>
+        <div id="product2" class="product" draggable="true">
+          <p>Продуктик</p>
+          <p class="cost">250</p>
+        </div>
+
+        <div id="cart" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <p>Корзина:</p>
+        </div>
+        <div class="total_price">
+          <p>Итого: <span class="price">0</span></p>
+        </div>
+      </div>
+
+      <div class="sixth">
+        <h2>sixth</h2>
+        <div class="square"></div>
+        <div class="ring"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

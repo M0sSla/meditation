@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Bring the well</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&family=Montserrat:wght@300;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="../image/IMAGE.jpg">
+  <link rel="stylesheet" href="../style.css" type="text/css">
+  <link rel="stylesheet" href="10task.css" type="text/css">
+  <script>
+    function generateCaptcha() {
+      const captchaValue = Math.random() > 0.5 ? generateRandomLetters() : generateRandomSum();
+      document.getElementById('captcha').innerText = captchaValue;
+      document.getElementById('captchaInput').value = '';
+      document.getElementById('submitButton').disabled = true;
+
+      const obj = {};
+      console.log(isEmpty(obj));
+    }
+
+    function generateRandomLetters() {
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let captcha = '';
+      for (let i = 0; i < 6; i++) {
+        captcha += letters[Math.floor(Math.random() * letters.length)];
+      }
+      return captcha;
+    }
+
+    function generateRandomSum() {
+      const num1 = Math.floor(Math.random() * 10);
+      const num2 = Math.floor(Math.random() * 10);
+      const sum = num1 + num2;
+      return `${num1} + ${num2} = ?`;
+    }
+
+    function checkCaptcha() {
+      const captchaInput = document.getElementById('captchaInput').value;
+      const captchaValue = document.getElementById('captcha').innerText;
+      if (isNaN(Number(captchaValue.substring(0, 1)))) {
+        document.getElementById('submitButton').addEventListener("click", function (e) {
+          if (captchaInput === captchaValue) {
+            alert("u are imposter")
+            document.getElementById('captchaInput').value = '';
+            generateCaptcha();
+          } else {
+            console.log('Ошибка! Попробуйте еще раз.');
+            document.getElementById('captchaInput').value = '';
+            generateCaptcha();
+          }
+        })
+      }
+
+      else {
+        document.getElementById('submitButton').addEventListener("click", function (e) {
+
+          console.log(captchaValue.substring(0,1));
+          console.log(captchaValue.substring(4,5));
+          if (Number(captchaInput) === (Number(captchaValue.substring(0,1)) + Number(captchaValue.substring(4,5)))) {
+            alert("u are imposter")
+            document.getElementById('captchaInput').value = '';
+            document.getElementById('captcha').innerText = '';
+            generateCaptcha();
+          } else {
+            alert('Ошибка! Попробуйте еще раз.');
+            document.getElementById('captchaInput').value = '';
+            document.getElementById('captcha').innerText = '';
+            generateCaptcha();
+          }
+        })
+      }
+
+    }
+
+    function removeDisabled () {
+      if(document.getElementById('captchaInput').value != '') {
+        document.getElementById('submitButton').disabled = false;
+      }
+    }
+
+    function isEmpty(obj) {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          return false;
+        }
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+<div class="wrapper">
+  <main id="sector2">
+    <div class="main__inner">
+      <h1>Проверка пользователя (капча)</h1>
+      <p id="captcha"></p>
+      <input type="text" id="captchaInput" placeholder="Введите капчу" oninput="removeDisabled()">
+      <button onclick="checkCaptcha()" id="submitButton" disabled>Отправить</button>
+      <button onclick="generateCaptcha()">Сгенерировать новую капчу</button>
+    </div>
+  </main>
+</div>
+</body>
+</html>
